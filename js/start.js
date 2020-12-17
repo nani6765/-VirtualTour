@@ -37,8 +37,6 @@ const calcScore = () => {
 	let Spoint = 0;
 	
 	for (let i = 0; i < ENDPOINT; i++) {
-		//point += qnaList[i].a[select[i]].score;
-		console.log(qnaList[i].a[select[i]].type[0]);
 		const firstType = qnaList[i].a[select[i]].type[0];
 		switch (firstType) {
 			case 'A':
@@ -54,7 +52,7 @@ const calcScore = () => {
 			case 'S' :
 				Spoint = Spoint+1;
 		}
-		const secondType = qnaList[i].a[select[i]].type[0];
+		const secondType = qnaList[i].a[select[i]].type[1];
 		switch (secondType) {
 			case 'A':
 				Apoint = Apoint+1;

@@ -29,12 +29,12 @@ function findIndicesOfMax(inp, count) {
 
 //스코어 계산
 const calcScore = () => {
-	let Apoint = 0;
-	let Gpoint = 0;
-	let Ipoint = 0;
-	let Ppoint = 0;
-	let Rpoint = 0;
-	let Spoint = 0;
+	var Apoint = 0;
+	var Gpoint = 0;
+	var Ipoint = 0;
+	var Ppoint = 0;
+	var Rpoint = 0;
+	var Spoint = 0;
 	
 	for (let i = 0; i < ENDPOINT; i++) {
 		const firstType = qnaList[i].a[select[i]].type[0];
@@ -75,7 +75,8 @@ const calcScore = () => {
 	const resultPoint = [Apoint, Gpoint, Ipoint, Ppoint, Rpoint, Spoint];
 	console.log("reultPoint : ", resultPoint);
 	const indices = findIndicesOfMax(resultPoint, 3);
-	
+	console.log("indices : ", indices);
+
 	let firstType = '';
 	let secondType = '';
 	let thirdType = '';

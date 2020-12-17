@@ -15,16 +15,12 @@ const select = [];
 let qIdx = -1;
 
 //3등까지 찾기
-function findIndicesOfMax(inp, count) {
-    var outp = [];
-    for (var i = 0; i < inp.length; i++) {
-        outp.push(i); // add index to output array
-        if (outp.length > count) {
-            outp.sort(function(a, b) { return inp[b] - inp[a]; }); // descending sort the output array
-            outp.pop(); // remove the last index (index of smallest element in output array)
-        }
-    }
-    return outp;
+function nTh(arr, n) {
+    // 가장 큰수 순서대로 sorting 한다
+    var sortedArr = arr.sort((a, b) => {
+        return b - a
+    });
+    return sortedArr[n - 1];
 }
 
 //스코어 계산
@@ -69,17 +65,17 @@ const calcScore = () => {
 			Spoint = Spoint+1;
 		}
 	}
-
 	console.log("A : " , Apoint, ", G : ", Gpoint, ", I : ", Ipoint, ", P : ", Ppoint, ", R : ", Rpoint, ", S : ", Spoint);
 
 	const resultPoint = [Apoint, Gpoint, Ipoint, Ppoint, Rpoint, Spoint];
-	console.log("reultPoint : ", resultPoint);
-	const indices = findIndicesOfMax(resultPoint, 3);
-	console.log("indices : ", indices);
+	const resultFirst = nTh(resultPoint, 1);
+	const resultSecond = nTh(resultPoint, 2);
+	const resultThird = nTh(resultPoint, 3);
+	console.log("resultFirst : " , resultFirst, ", resultSecond : ", resultSecond, ", resultThird : ", resultThird);
 
-	let firstType = '';
-	let secondType = '';
-	let thirdType = '';
+	var firstType = '';
+	var secondType = '';
+	var thirdType = '';
 
 	switch(resultPoint[indices[0]]){
 		case Apoint:

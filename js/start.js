@@ -14,15 +14,6 @@ const ENDPOINT = 7;
 const select = [];
 let qIdx = -1;
 
-//3등까지 찾기
-function nTh(arr, n) {
-    // 가장 큰수 순서대로 sorting 한다
-    var sortedArr = arr.sort((a, b) => {
-        return b - a
-    });
-    return sortedArr[n - 1];
-}
-
 //스코어 계산
 const calcScore = () => {
 	var Apoint = 0;
@@ -68,66 +59,29 @@ const calcScore = () => {
 	console.log("A : " , Apoint, ", G : ", Gpoint, ", I : ", Ipoint, ", P : ", Ppoint, ", R : ", Rpoint, ", S : ", Spoint);
 
 	const resultPoint = [Apoint, Gpoint, Ipoint, Ppoint, Rpoint, Spoint];
-	const resultFirst = nTh(resultPoint, 1);
-	const resultSecond = nTh(resultPoint, 2);
-	const resultThird = nTh(resultPoint, 3);
-	console.log("resultFirst : " , resultFirst, ", resultSecond : ", resultSecond, ", resultThird : ", resultThird);
 
 	var firstType = '';
 	var secondType = '';
 	var thirdType = '';
 
-	switch(resultPoint[indices[0]]){
-		case Apoint:
-			firstType = 'A';
-		case Gpoint:
-			firstType = 'G';
-		case Ipoint :
-			firstType = 'I';
-		case Ppoint :
-			firstType = 'P';
-		case Rpoint :
-			firstType = 'R';
-		case Spoint :
-			firstType = 'S';
-		default:
-			console.log("Result error");
+	if( Apoint >= Rpoint){
+		firstType = 'A';
+	} else {
+		firstType = 'R';
 	}
 
-	switch(resultPoint[indices[1]]){
-		case Apoint:
-			secondType = 'A';
-		case Gpoint:
-			secondType = 'G';
-		case Ipoint :
-			secondType = 'I';
-		case Ppoint :
-			secondType = 'P';
-		case Rpoint :
-			secondType = 'R';
-		case Spoint :
-			secondType = 'S';
-		default:
-			console.log("Result error");
-	}	
-	
-	switch(resultPoint[indices[2]]){
-		case Apoint:
-			thirdType = 'A';
-		case Gpoint:
-			thirdType = 'G';
-		case Ipoint :
-			thirdType = 'I';
-		case Ppoint :
-			thirdType = 'P';
-		case Rpoint :
-			thirdType = 'R';
-		case Spoint :
-			thirdType = 'S';
-		default:
-			console.log("Result error");
+	if( Spoint >= Ppoint){
+		secondType = 'S';
+	} else {
+		secondType = 'P';
 	}
-	
+
+	if( Ipoint >= Gpoint){
+		thirdType = 'I';
+	} else {
+		thirdType = 'G';
+	}
+
 	let resultArray = [firstType, secondType, thirdType];
 	console.log("resultArray", resultArray);
 	let sortArray = resultArray.sort();

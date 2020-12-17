@@ -91,7 +91,7 @@ const calcScore = () => {
 
 //합산된 점수의 scope에 따라 num반환
 const sortResult = (resultword) => {
-	const resultNum = 0;
+	var resultNum = 0;
 	const samplearray = ['ASI', 'ASG', 'API', 'APG', 'RSI', 'RSG', 'RPI', 'RPG'];
 	for(var i = 0; i < samplearray.length; i++){
 		if( samplearray[i] === resultword ){

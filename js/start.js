@@ -94,12 +94,13 @@ const calcScore = () => {
 //합산된 점수의 scope에 따라 num반환
 const sortResult = (resultword) => {
 	const resultNum = 0;
-	const samplearray = ['AIS', 'AGS', 'AIP', 'AGP', 'RIS', 'RGS', 'RIP', 'RGP'];
+	const samplearray = ['ASI', 'ASG', 'API', 'APG', 'RSI', 'RSG', 'RPI', 'RPG'];
 	for(var i = 0; i < samplearray.length; i++){
 		if( samplearray[i] === resultword ){
 			resultNum = i;
 		}
 	}
+	console.log("resultNum ", resultNum);
 	return resultNum;
 };
 

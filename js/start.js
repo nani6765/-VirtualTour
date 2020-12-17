@@ -86,7 +86,7 @@ const calcScore = () => {
 	console.log("resultArray", resultArray);
 	let sortArray = resultArray.sort();
 	console.log("sortArray", sortArray);
-	let resultword = sortArray.join();
+	let resultword = sortArray.join(['']);
 	console.log("resultword", resultword);
 	return resultword;
 }

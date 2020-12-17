@@ -3,7 +3,6 @@ const footer = document.getElementById('footer');
 
 const wrap = document.getElementById('wrap');
 const qna = document.getElementById('qna');
-const u_name = document.querySelector('input[type=text]');
 
 const tabletMQL = window.matchMedia('all and (min-width: 768px)');
 const pcMQL = window.matchMedia('all and (min-width: 1024px)');
@@ -118,7 +117,7 @@ const goResult = () => {
 	const grade = sortResult(point); // return num
 	
 	const pTitle = document.querySelector('.p'); 
-	pTitle.innerHTML = u_name.value + ' 님의 결과는?!';
+	pTitle.innerHTML ='당신의 결과는?!';
 	
 	/*
 	const pin = document.querySelector('.pin');
@@ -278,30 +277,14 @@ const begin = () => {
 };
 
 const load = () => {
-	const msg = document.querySelector('.check-name');
 	const start_btn = document.querySelector('.start');
-
-	u_name.addEventListener('blur', () => {
-		try {
-			if (u_name.value.length < 1) {
-				throw '이름을 입력하고 시작해 주세요.';
-			}
-			msg.innerHTML = '';
-		} catch (err) {
-			msg.innerHTML = err;
-		}
-	});
 
 	start_btn.addEventListener('click', () => {
 		try {
-			if (u_name.value.length < 1) {
-				throw '이름을 입력하고 시작해 주세요.';
-			}
-			msg.innerHTML = '';
 			start_btn.disabled = true;
 			begin();
 		} catch (err) {
-			msg.innerHTML = err;
+			console.log(err);
 		}
 	});
 };

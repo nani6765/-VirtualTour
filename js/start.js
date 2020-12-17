@@ -68,7 +68,17 @@ const calcScore = () => {
 				Spoint = Spoint+1;
 		}
 	}
+
+	let Apoint = 0;
+	let Gpoint = 0;
+	let Ipoint = 0;
+	let Ppoint = 0;
+	let Rpoint = 0;
+	let Spoint = 0;
+	console.log("A : " , Apoint, ", G : ", Gpoint, ", I : ", Ipoint, ", P : ", Ppoint, ", R : ", Rpoint, ", S : ", Spoint);
+
 	const resultPoint = [Apoint, Gpoint, Ipoint, Ppoint, Rpoint, Spoint];
+	console.log("reultPoint : ", resultPoint);
 	const indices = findIndicesOfMax(resultPoint, 3);
 	
 	let firstType = '';

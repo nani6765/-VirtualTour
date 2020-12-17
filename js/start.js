@@ -39,35 +39,34 @@ const calcScore = () => {
 	for (let i = 0; i < ENDPOINT; i++) {
 		const firstType = qnaList[i].a[select[i]].type[0];
 		console.log(i, "번째 firstType", firstType);
-		switch (firstType) {
-			case 'A':
-				Apoint = Apoint+1;
-			case 'G':
-				Gpoint = Gpoint+1;
-			case 'I' :
-				Ipoint = Ipoint+1;
-			case 'P' :
-				Ppoint = Ppoint+1;
-			case 'R' :
+		if (firstType === 'A'){
+			Apoint = Apoint+1;
+		} else if (firstType === 'G'){
+			Gpoint = Gpoint+1;
+		}else if (firstType === 'I'){
+			Ipoint = Ipoint+1;
+		}else if (firstType === 'P'){
+			Ppoint = Ppoint+1;
+		}else if (firstType === 'R'){
 				Rpoint = Rpoint+1;
-			case 'S' :
-				Spoint = Spoint+1;
+		}else if (firstType === 'S'){
+			Spoint = Spoint+1;
 		}
+
 		const secondType = qnaList[i].a[select[i]].type[1];
 		console.log(i, "번째 secondType", secondType);
-		switch (secondType) {
-			case 'A':
-				Apoint = Apoint+1;
-			case 'G':
-				Gpoint = Gpoint+1;
-			case 'I' :
-				Ipoint = Ipoint+1;
-			case 'P' :
-				Ppoint = Ppoint+1;
-			case 'R' :
+		if (secondType === 'A'){
+			Apoint = Apoint+1;
+		} else if (secondType === 'G'){
+			Gpoint = Gpoint+1;
+		}else if (secondType === 'I'){
+			Ipoint = Ipoint+1;
+		}else if (secondType === 'P'){
+			Ppoint = Ppoint+1;
+		}else if (secondType === 'R'){
 				Rpoint = Rpoint+1;
-			case 'S' :
-				Spoint = Spoint+1;
+		} else if (secondType === 'S'){
+			Spoint = Spoint+1;
 		}
 	}
 

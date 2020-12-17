@@ -7,6 +7,7 @@ const qna = document.getElementById('qna');
 const tabletMQL = window.matchMedia('all and (min-width: 768px)');
 const pcMQL = window.matchMedia('all and (min-width: 1024px)');
 
+
 //7개의 질문
 const ENDPOINT = 7;
 //선택한 배열

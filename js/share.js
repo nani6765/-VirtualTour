@@ -9,7 +9,7 @@ function sendKakaoLink() {
 			title: '방에서 떠나는 가상여행',
 			description: '#2심리테스트 #방에서 떠나는 가상여행 #나와 맞는 여행지는?',
 			imageUrl:
-				'https://virtualtourtest.netlify.app/img/share.png',
+				'https://virtualtourtest.netlify.app/img/kakaotalk.png',
 			link: {
 				mobileWebUrl: 'https://virtualtourtest.netlify.app/',
 				webUrl: 'https://virtualtourtest.netlify.app/',

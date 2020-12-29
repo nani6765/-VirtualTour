@@ -121,11 +121,18 @@ const goResult = () => {
 	const img_url = 'img/image-' + grade + '.png';
 	const res_img = document.createElement('img');
 	const res_img_div = document.querySelector('.art');
+
+	/*
 	const title = document.querySelector('#decTitle');
 	const sub = document.querySelector('#decSub');
 	const desc = document.querySelector('#desContent');
 	const place = document.querySelector('#decPlace');
-
+	*/
+	const title = document.getElementById("decTitle");
+	const sub = document.getElementById("decSub");
+	const desc = document.getElementById("desContent");
+	const place = document.getElementById("decPlace");
+	
 	//이미지 이름을 image-`grade`.png로 저장할 것
 	pTitle.innerHTML ='당신의 결과는?!';
 	res_img.src = img_url; //img.src

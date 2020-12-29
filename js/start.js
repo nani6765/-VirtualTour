@@ -132,17 +132,11 @@ const goResult = () => {
 	res_img.alt = infoList[grade].name; //img.alt
 	res_img.title = infoList[grade].name; //img.title = img.name
 	res_img_div.appendChild(res_img);
-	/*
-	title.textContent = infoList[grade].name;
-	sub.textContent = infoList[grade].sub;
-	desc.textContent = infoList[grade].desc;
-	place.textContent = infoList[grade].place;
-	*/
-	document.querySelector('#decTitle').textContent = infoList[grade].name;
-	document.querySelector('#decSub').textContent = infoList[grade].sub;
-	document.querySelector('#desContent').textContent = infoList[grade].desc;
-	document.querySelector('#decPlace').textContent = infoList[grade].place;
 
+	title.appendChild = infoList[grade].name;
+	sub.appendChild = infoList[grade].sub;
+	desc.appendChild = infoList[grade].desc;
+	place.appendChild = infoList[grade].place;
 
 	//https://developer.mozilla.org/ko/docs/Web/API/WindowTimers/setTimeout
 	//0.6초

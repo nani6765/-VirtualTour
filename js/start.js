@@ -123,7 +123,7 @@ const goResult = () => {
 	const res_img_div = document.querySelector('.art');
 	const title = document.querySelector('.result');
 	const sub = document.querySelector('.subTitle');
-	const desc = document.querySelector('.res');
+	const desc = document.querySelector('.desc');
 	const place = document.querySelector('.place');
 
 	//이미지 이름을 image-`grade`.png로 저장할 것

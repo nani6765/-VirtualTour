@@ -128,10 +128,10 @@ const goResult = () => {
 	const desc = document.querySelector('#decContent');
 	const place = document.querySelector('#decPlace');
 	*/
-	const title = document.getElementById("decTitle");
-	const sub = document.getElementById("decSub");
-	const desc = document.getElementById("decContent");
-	const place = document.getElementById("decPlace");
+	const dectitle = document.getElementById("decTitle");
+	const decsub = document.getElementById("decSub");
+	const decdesc = document.getElementById("decContent");
+	const decplace = document.getElementById("decPlace");
 
 	//이미지 이름을 image-`grade`.png로 저장할 것
 	pTitle.innerHTML ='당신의 결과는?!';
@@ -140,10 +140,10 @@ const goResult = () => {
 	res_img.title = infoList[grade].name; //img.title = img.name
 	res_img_div.appendChild(res_img);
 
-	title.appendChild = infoList[grade].name;
-	sub.appendChild = infoList[grade].sub;
-	desc.appendChild = infoList[grade].desc;
-	place.appendChild = infoList[grade].place;
+	dectitle.appendChild = infoList[grade].name;
+	decsub.appendChild = infoList[grade].sub;
+	decdesc.appendChild = infoList[grade].desc;
+	decplace.appendChild = infoList[grade].place;
 
 	//https://developer.mozilla.org/ko/docs/Web/API/WindowTimers/setTimeout
 	//0.6초

@@ -22,7 +22,7 @@ const calcScore = () => {
 	var Ppoint = 0;
 	var Rpoint = 0;
 	var Spoint = 0;
-	
+
 	for (let i = 0; i < ENDPOINT; i++) {
 		const firstType = qnaList[i].a[select[i]].type[0];
 		console.log(i, "번째 firstType", firstType);
@@ -103,7 +103,7 @@ const sortResult = (resultword) => {
 };
 
 const goResult = () => {
-	//pc 
+	//pc
 	if (pcMQL.matches) {
 		console.log('PC');
 		wrap.style.marginTop = '150px';
@@ -112,40 +112,31 @@ const goResult = () => {
 		console.log('tablet');
 		wrap.style.marginTop = '115px';
 	}
-		
+
 	const result = document.getElementById('result');
 	const point = calcScore(); //return point
 	const grade = sortResult(point); // return num
-	
-	const pTitle = document.querySelector('.p'); 
-	pTitle.innerHTML ='당신의 결과는?!';
-	
-	/*
-	const pin = document.querySelector('.pin');
-	//console.log("mleft", infoList[grade].mLeft)
-	//data.js에 정의되어 있음. 애니메이션에 사용되는 것 같은데..?
-	pin.style.marginLeft = infoList[grade].mLeft;
-	*/
-	
-	//이미지 이름을 image-`grade`.png로 저장할 것
+
+	const pTitle = document.querySelector('.p');
 	const img_url = 'img/image-' + grade + '.png';
-	//https://www.w3schools.com/jsref/met_document_createelement.asp
 	const res_img = document.createElement('img');
+	const res_img_div = document.querySelector('.art');
+	const title = document.querySelector('.result');
+	const sub = document.querySelector('.subTitle');
+	const desc = document.querySelector('.res');
+	const place = document.querySelector('.place');
+
+	//이미지 이름을 image-`grade`.png로 저장할 것
+	pTitle.innerHTML ='당신의 결과는?!';
 	res_img.src = img_url; //img.src
 	res_img.alt = infoList[grade].name; //img.alt
 	res_img.title = infoList[grade].name; //img.title = img.name
-	
-	//https://developer.mozilla.org/ko/docs/Web/API/Node/appendChild
-	const res_img_div = document.querySelector('.art');
 	res_img_div.appendChild(res_img);
-	
-	const animal = document.querySelector('.result');
-	animal.innerHTML = infoList[grade].name;
-	
-	//description
-	const desc = document.querySelector('.res');
+	title.innerHTML = infoList[grade].name;
+	sub.innerHTML = infoList[grade].sub;
 	desc.innerHTML = infoList[grade].desc;
-	
+	place.innerHTML = infoList[grade].place;
+
 	//https://developer.mozilla.org/ko/docs/Web/API/WindowTimers/setTimeout
 	//0.6초
 	setTimeout(() => {
@@ -166,20 +157,20 @@ const end = () => {
 		qna.style.opacity -= 0.1;
 		qna.style.transform = 'translateY(-1px)';
 	}, 50);
-	
+
 	//https://www.w3schools.com/jsref/met_win_cleartimeout.asp
 	//timeout 지정 해제
 	setTimeout(() => clearTimeout(interval), 500);
 	//qna display 지움
 	setTimeout(() => (qna.style.display = 'none'), 500);
-	
+
 	//계산중인 화면 등장
 	setTimeout(() => {
 		const calc = document.getElementById('calc');
 		calc.style.display = 'block';
 		calc.style.animation = 'going-up 0.5s forwards, ' + 'fade-in 0.5s forwards';
 	}, 700);
-	
+
 	//계산중인 화면 사라짐
 	setTimeout(() => {
 		calc.style.animation = '';
@@ -197,15 +188,15 @@ const addAnswer = (answerTxt, idx) => {
 	const answer = document.createElement('button');
 	answer.className += 'a box';
 	answer.innerHTML = answerTxt;
-	
+
 	answer.addEventListener('click', () => {
-		
+
 		const parent = answer.parentNode;
 		const children = parent.childNodes;
 		for (let i in children) {
 			children[i].disabled = true;
 		}
-		
+
 		//face-out-5-4가 뭐하는건질 모르겠네..
 		parent.classList.add('fade-out-5-4');
 		setTimeout(() => {
@@ -232,11 +223,11 @@ const goNext = () => {
 
 	const status = document.querySelector('.status');
 	status.style.width = (100/ENDPOINT) * (qIdx + 1) + '%';
-	
+
 	const qNum = qnaList[qIdx];
 	const q = document.querySelector('.q');
 	q.innerHTML = qNum.q;
-	
+
 	//const qna = document.getElementById('qna');
 	qna.style.animation =
 		'fade-in 0.3s ease-in-out 0.4s forwards, ' + 'going-down 0.3s ease-in-out 0.4s forwards';

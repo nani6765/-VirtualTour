@@ -140,10 +140,10 @@ const goResult = () => {
 	res_img.title = infoList[grade].name; //img.title = img.name
 	res_img_div.appendChild(res_img);
 
-	dectitle.appendChild = infoList[grade].name;
-	decsub.appendChild = infoList[grade].sub;
-	decdesc.appendChild = infoList[grade].desc;
-	decplace.appendChild = infoList[grade].place;
+	dectitle.innerHTML = infoList[grade].name;
+	decsub.innerHTML = infoList[grade].sub;
+	decdesc.innerHTML = infoList[grade].desc;
+	decplace.innerHTML = infoList[grade].place;
 
 	//https://developer.mozilla.org/ko/docs/Web/API/WindowTimers/setTimeout
 	//0.6초

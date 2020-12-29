@@ -132,10 +132,10 @@ const goResult = () => {
 	res_img.alt = infoList[grade].name; //img.alt
 	res_img.title = infoList[grade].name; //img.title = img.name
 	res_img_div.appendChild(res_img);
-	title.textcontent = infoList[grade].name;
-	sub.textcontent = infoList[grade].sub;
-	desc.textcontent = infoList[grade].desc;
-	place.textcontent = infoList[grade].place;
+	title.textContent = infoList[grade].name;
+	sub.textContent = infoList[grade].sub;
+	desc.textContent = infoList[grade].desc;
+	place.textContent = infoList[grade].place;
 
 	//https://developer.mozilla.org/ko/docs/Web/API/WindowTimers/setTimeout
 	//0.6초

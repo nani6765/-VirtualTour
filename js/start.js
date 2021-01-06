@@ -205,7 +205,7 @@ const addAnswer = (answerTxt, idx) => {
 const goNext = () => {
 	if (qIdx++ === qnaList.length - 1) {
 		//qnaList를 다 돌았으면 end로
-		end();
+		goResult();
 		return;
 	}
 

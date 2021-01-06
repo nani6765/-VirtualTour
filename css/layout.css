@@ -1,6 +1,6 @@
 body {
 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e570e7+0,c85ec7+47,a849a3+100;Pink+3D+%233 */
-background: #ffc8c6; 
+background: #ffc8c6;
 }
 
 #wrap {
@@ -30,7 +30,7 @@ background: #ffc8c6;
 	width: 0px;
 	height: 0px;
 	background: #ffffff;
-	
+
 }
 
 #footer {
@@ -51,7 +51,7 @@ background: #ffc8c6;
 		margin-top: 115px;
 	}
 	.container {
-		padding: 60px 5% 37.5px 5%;
+		padding: 20px 5% 37.5px 5%;
 		width: 80%;
 		min-width: 80%;
 		border-radius: 20px;
@@ -80,13 +80,13 @@ background: #ffc8c6;
 		margin-top: 150px;
 	}
 	.container {
-		padding: 100px 5% 40px 5%;
+		padding: 20px 5% 40px 5%;
 		width: 70%;
 		min-width: 70%;
 		border-radius: 30px;
 	}
 	#header {
-		display: none;		
+		display: none;
 		margin: 0 15%;
 		padding: 0px 15px 15px 0px;
 		width: 70%;
@@ -104,7 +104,7 @@ background: #ffc8c6;
 
 @media all and (min-width: 1440px) {
 	.container {
-		padding: 100px 3.5% 50px 3.5%;
+		padding: 20px 3.5% 50px 3.5%;
 		width: 55%;
 		min-width: 55%;
 	}

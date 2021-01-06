@@ -1,4 +1,3 @@
-const header = document.getElementById('header');
 const footer = document.getElementById('footer');
 
 const wrap = document.getElementById('wrap');
@@ -128,10 +127,8 @@ const goResult = () => {
 	res_img_div.appendChild(res_img);
 
 	setTimeout(() => {
-		header.style.display = 'block';
 		footer.style.display = 'block';
 		result.style.display = 'block';
-		header.style.animation = 'fade-in 0.3s forwards';
 		footer.style.animation = 'fade-in 0.3s forwards';
 		result.style.animation = 'going-up 0.5s, ' + 'fade-in 0.5s forwards';
 	}, 600);
@@ -240,7 +237,6 @@ const begin = () => {
 		500
 	);
 	setTimeout(() => {
-		header.style.display = 'none';
 		footer.style.display = 'none';
 		main.style.display = 'none';
 		qna.style.display = 'block';

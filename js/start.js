@@ -108,6 +108,9 @@ const goResult = () => {
 		qna.style.opacity -= 0.1;
 		qna.style.transform = 'translateY(-1px)';
 	}, 50);
+	setTimeout(() => clearTimeout(interval), 500);
+	//qna display 지움
+	setTimeout(() => (qna.style.display = 'none'), 500);
 
 	//pc
 	if (pcMQL.matches) {

@@ -148,7 +148,7 @@ function copyImage(){
 	const point = calcScore(); //return point
 	const grade = sortResult(point); // return num
 	const img_url = 'img/image-' + grade + '.png';
-	const ImageURL = 'https://virtualtourtest.netlify.app/img/' + img_url;
+	const ImageURL = 'https://virtualtourtest.netlify.app/' + img_url;
 	window.location.assign(ImageURL);
 }
 

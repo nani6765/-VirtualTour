@@ -108,7 +108,7 @@ const goResult = () => {
 		qna.style.opacity -= 0.1;
 		qna.style.transform = 'translateY(-1px)';
 	}, 50);
-	
+
 	//pc
 	if (pcMQL.matches) {
 		console.log('PC');
@@ -210,7 +210,7 @@ const addAnswer = (answerTxt, idx) => {
 const goNext = () => {
 	if (qIdx++ === qnaList.length - 1) {
 		//qnaList를 다 돌았으면 end로
-		end();
+		goResult();
 		return;
 	}
 
@@ -245,6 +245,7 @@ const begin = () => {
 		500
 	);
 	setTimeout(() => {
+		window.scrollTo(0,0);
 		footer.style.display = 'none';
 		main.style.display = 'none';
 		qna.style.display = 'block';

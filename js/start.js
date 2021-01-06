@@ -101,6 +101,14 @@ const sortResult = (resultword) => {
 };
 
 const goResult = () => {
+	qna.style.animation = '';
+	//https://www.w3schools.com/jsref/met_win_setinterval.asp
+	//주기적으로 흐려지며 y축으로 사라짐
+	const interval = setInterval(() => {
+		qna.style.opacity -= 0.1;
+		qna.style.transform = 'translateY(-1px)';
+	}, 50);
+	
 	//pc
 	if (pcMQL.matches) {
 		console.log('PC');
@@ -202,7 +210,7 @@ const addAnswer = (answerTxt, idx) => {
 const goNext = () => {
 	if (qIdx++ === qnaList.length - 1) {
 		//qnaList를 다 돌았으면 end로
-		goResult();
+		end();
 		return;
 	}
 

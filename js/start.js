@@ -127,7 +127,6 @@ const goResult = () => {
 
 	const pTitle = document.querySelector('.p');
 	const img_url = 'img/image-' + grade + '.png';
-	const ImageURL = 'https://virtualtourtest.netlify.app/img/' + img_url;
 	const res_img = document.createElement('img');
 	const res_img_div = document.querySelector('.art');
 
@@ -146,6 +145,10 @@ const goResult = () => {
 };
 
 function copyImage(){
+	const point = calcScore(); //return point
+	const grade = sortResult(point); // return num
+	const img_url = 'img/image-' + grade + '.png';
+	const ImageURL = 'https://virtualtourtest.netlify.app/img/' + img_url;
 	window.location.assign(ImageURL);
 }
 

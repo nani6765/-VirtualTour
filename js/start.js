@@ -205,7 +205,7 @@ const addAnswer = (answerTxt, idx) => {
 const goNext = () => {
 	if (qIdx++ === qnaList.length - 1) {
 		//qnaList를 다 돌았으면 end로
-		end();
+		goResult();
 		return;
 	}
 
@@ -232,7 +232,6 @@ const goNext = () => {
 
 const begin = () => {
 	const main = document.getElementById('main');
-	header.style.animation = 'going-up 0.4s forwards, ' + 'fade-out 0.4s forwards';
 	footer.style.animation = 'going-down 0.4s forwards, ' + 'fade-out 0.4s forwards';
 	setTimeout(
 		() =>

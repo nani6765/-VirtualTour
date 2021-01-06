@@ -56,7 +56,6 @@ const calcScore = () => {
 			Spoint = Spoint+1;
 		}
 	}
-	console.log("A : " , Apoint, ", G : ", Gpoint, ", I : ", Ipoint, ", P : ", Ppoint, ", R : ", Rpoint, ", S : ", Spoint);
 
 	const resultPoint = [Apoint, Gpoint, Ipoint, Ppoint, Rpoint, Spoint];
 
@@ -122,31 +121,12 @@ const goResult = () => {
 	const res_img = document.createElement('img');
 	const res_img_div = document.querySelector('.art');
 
-	/*
-	const title = document.querySelector('#decTitle');
-	const sub = document.querySelector('#decSub');
-	const desc = document.querySelector('#decContent');
-	const place = document.querySelector('#decPlace');
-	*/
-	const dectitle = document.getElementById("decTitle");
-	const decsub = document.getElementById("decSub");
-	const decdesc = document.getElementById("decContent");
-	const decplace = document.getElementById("decPlace");
-
-	//이미지 이름을 image-`grade`.png로 저장할 것
 	pTitle.innerHTML ='당신의 결과는?!';
 	res_img.src = img_url; //img.src
 	res_img.alt = infoList[grade].name; //img.alt
 	res_img.title = infoList[grade].name; //img.title = img.name
 	res_img_div.appendChild(res_img);
 
-	dectitle.innerHTML = infoList[grade].name;
-	decsub.innerHTML = infoList[grade].sub;
-	decdesc.innerHTML = infoList[grade].desc;
-	decplace.innerHTML = infoList[grade].place;
-
-	//https://developer.mozilla.org/ko/docs/Web/API/WindowTimers/setTimeout
-	//0.6초
 	setTimeout(() => {
 		header.style.display = 'block';
 		footer.style.display = 'block';

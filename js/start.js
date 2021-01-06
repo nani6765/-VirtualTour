@@ -6,7 +6,6 @@ const qna = document.getElementById('qna');
 const tabletMQL = window.matchMedia('all and (min-width: 768px)');
 const pcMQL = window.matchMedia('all and (min-width: 1024px)');
 
-
 //7개의 질문
 const ENDPOINT = 7;
 //선택한 배열
@@ -128,6 +127,7 @@ const goResult = () => {
 
 	const pTitle = document.querySelector('.p');
 	const img_url = 'img/image-' + grade + '.png';
+	const ImageURL = 'https://virtualtourtest.netlify.app/img/' + img_url;
 	const res_img = document.createElement('img');
 	const res_img_div = document.querySelector('.art');
 
@@ -144,6 +144,10 @@ const goResult = () => {
 		result.style.animation = 'going-up 0.5s, ' + 'fade-in 0.5s forwards';
 	}, 600);
 };
+
+const copyImage = () => {
+	window.location.assign(ImageURL);
+}
 
 const end = () => {
 	qna.style.animation = '';

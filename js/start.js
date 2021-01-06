@@ -145,7 +145,7 @@ const goResult = () => {
 	}, 600);
 };
 
-const copyImage = () => {
+function copyImage(){
 	window.location.assign(ImageURL);
 }
 

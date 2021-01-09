@@ -50,14 +50,15 @@
 				$('html, body').animate({ scrollTop: 0 }, 'fast');
 			});
 		</script>
-
-		<!-- 구글애즈 -->
-		<script
-			data-ad-client="ca-pub-4729413690339359"
-			async
-			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-		></script>
-	</head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDJRT49RV1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-EDJRT49RV1');
+	</script>
+</head>
 	<body>
 		<div id="wrap">
 			<section id="main" class="container">
@@ -71,8 +72,8 @@
 					<span class="time_logo"></span>
 					<p>소요 시간 : 1분 내외</p>
 				</div>
-				<p class="w-line">
-					여행을 가고 싶어도 여행을 갈 수 없는 요즘, 일상에서 벗어나는 경험이 필요하다면?<br>방에서 떠나는 가상여행은 성격심리검사를 바탕으로 당신의 성향과 적합한 여행지를 추천해드립니다.
+				<p class="wline">
+					여행을 가고 싶어도 여행을 갈 수 없는 요즘,<br> 일상에서 벗어나는 경험이 필요하다면?<br>방에서 떠나는 가상여행은 성격심리검사를 바탕으로 당신의 성향과 적합한 여행지를 추천해드립니다.
 				</p>
 				<div class="start-wrap">
 					<button class="start">시 작</button>
@@ -108,9 +109,7 @@
 					<div class="res" id="decPlace"></div>
 					<!-- 설명끝 -->
 					<!-- 이후에 추가할 것, 공유하기(혹은 복사), copyright에 대한 설명 등 -->
-					<button class="btn" onclick="copyImage()">결과 저장하기</button>
-
-					<div class="hash">#심리테스트 #방에서 떠나는 가상여행 #나와 맞는 여행지는?</div>
+				<div class="hash">#심리테스트 #방에서 떠나는 가상여행 #나와 맞는 여행지는?</div>
 					<div id="share-box">
 						<a
 							onclick="javascript:copy()"

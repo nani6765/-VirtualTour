@@ -132,7 +132,7 @@ const goResult = () => {
 
 	pTitle.innerHTML ='당신의 결과는?!';
 	res_img.src = img_url; //img.src
-	res_img.alt = infoList[grade].name; //img.alt
+	res_img.alt = grade; //img.alt
 	res_img.title = infoList[grade].name; //img.title = img.name
 	res_img_div.appendChild(res_img);
 

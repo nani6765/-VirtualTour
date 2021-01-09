@@ -23,7 +23,7 @@ const calcScore = () => {
 
 	for (let i = 0; i < ENDPOINT; i++) {
 		const firstType = qnaList[i].a[select[i]].type[0];
-		console.log(i, "번째 firstType", firstType);
+		//console.log(i, "번째 firstType", firstType);
 		if (firstType === 'A'){
 			Apoint = Apoint+1;
 		} else if (firstType === 'G'){
@@ -39,7 +39,7 @@ const calcScore = () => {
 		}
 
 		const secondType = qnaList[i].a[select[i]].type[1];
-		console.log(i, "번째 secondType", secondType);
+		//console.log(i, "번째 secondType", secondType);
 		if (secondType === 'A'){
 			Apoint = Apoint+1;
 		} else if (secondType === 'G'){
@@ -80,9 +80,9 @@ const calcScore = () => {
 	}
 
 	let resultArray = [firstType, secondType, thirdType];
-	console.log("resultArray", resultArray);
+	//console.log("resultArray", resultArray);
 	let resultword = resultArray.join(['']);
-	console.log("resultword", resultword);
+	//console.log("resultword", resultword);
 	return resultword;
 }
 
@@ -95,7 +95,7 @@ const sortResult = (resultword) => {
 			resultNum = i;
 		}
 	}
-	console.log("resultNum ", resultNum);
+	//console.log("resultNum ", resultNum);
 	return resultNum;
 };
 
@@ -113,11 +113,11 @@ const goResult = () => {
 
 	//pc
 	if (pcMQL.matches) {
-		console.log('PC');
+		//console.log('PC');
 		wrap.style.marginTop = '150px';
 	//tablet
 	} else if (tabletMQL.matches) {
-		console.log('tablet');
+		//console.log('tablet');
 		wrap.style.marginTop = '115px';
 	}
 
@@ -260,10 +260,10 @@ const begin = () => {
 		main.style.display = 'none';
 		qna.style.display = 'block';
 		if (pcMQL.matches) {
-			console.log('PC');
+			//console.log('PC');
 			wrap.style.marginTop = '50px';
 		} else if (tabletMQL.matches) {
-			console.log('tablet');
+			//console.log('tablet');
 			wrap.style.marginTop = '30px';
 		}
 		goNext();
@@ -278,7 +278,7 @@ const load = () => {
 			start_btn.disabled = true;
 			begin();
 		} catch (err) {
-			console.log(err);
+			//console.log(err);
 		}
 	});
 };

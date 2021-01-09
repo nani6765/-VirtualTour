@@ -80,7 +80,7 @@ function createDescription(){
 			var shareDescription = '';
 			break;
 	}
-	const shareImageUrl = url + 'img/image-' + imageNumber + '.png';
+	const shareImageUrl = url + 'img/png/' + imageNumber + '.png';
 	sendKakaoLink(shareTitle, shareDescription, shareImageUrl);
 }
 

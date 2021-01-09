@@ -49,7 +49,7 @@ function createDescription(){
 	switch (imageNumber) {
 		case 0:
 			const shareTitle = infoList[0].name;
-			const shareDescription = ''';
+			const shareDescription = '';
 			break;
 		case 1:
 			const shareTitle = infoList[1].name;

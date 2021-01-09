@@ -48,36 +48,36 @@ function createDescription(){
 	}
 	switch (imageNumber) {
 		case 0:
-			const shareTitle = infoList[0].name;
-			const shareDescription = '';
+			var shareTitle = infoList[0].name;
+			var shareDescription = '';
 			break;
 		case 1:
-			const shareTitle = infoList[1].name;
-			const shareDescription = '';
+			var shareTitle = infoList[1].name;
+			var shareDescription = '';
 			break;
 		case 2:
-			const shareTitle = infoList[2].name;
-			const shareDescription = '';
+			var shareTitle = infoList[2].name;
+			var shareDescription = '';
 			break;
 		case 3:
-			const shareTitle = infoList[3].name;
-			const shareDescription = '';
+			var shareTitle = infoList[3].name;
+			var shareDescription = '';
 			break;
 		case 4:
-			const shareTitle = infoList[4].name;
-			const shareDescription = '';
+			var shareTitle = infoList[4].name;
+			var shareDescription = '';
 			break;
 		case 5:
-			const shareTitle = infoList[5].name;
-			const shareDescription = '';
+			var shareTitle = infoList[5].name;
+			var shareDescription = '';
 			break;
 		case 6:
-			const shareTitle = infoList[6].name;
-			const shareDescription = '';
+			var shareTitle = infoList[6].name;
+			var shareDescription = '';
 			break;
 		case 7:
-			const shareTitle = infoList[7].name;
-			const shareDescription = '';
+			var shareTitle = infoList[7].name;
+			var shareDescription = '';
 			break;
 	}
 	const shareImageUrl = url + 'img/image-' + imageNumber + '.png';

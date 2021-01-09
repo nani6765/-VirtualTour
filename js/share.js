@@ -48,38 +48,31 @@ function createDescription(){
 	}
 	switch (imageNumber) {
 		case 0:
-			var shareTitle = infoList[0].name;
-			var shareDescription = '';
+			var shareDescription = infoList[0].name;
 			break;
 		case 1:
-			var shareTitle = infoList[1].name;
-			var shareDescription = '';
+			var shareDescription = infoList[1].name;
 			break;
 		case 2:
-			var shareTitle = infoList[2].name;
-			var shareDescription = '';
+			var shareDescription = infoList[2].name;
 			break;
 		case 3:
-			var shareTitle = infoList[3].name;
-			var shareDescription = '';
+			var shareDescription = infoList[3].name;
 			break;
 		case 4:
-			var shareTitle = infoList[4].name;
-			var shareDescription = '';
+			var shareDescription = infoList[4].name;
 			break;
 		case 5:
-			var shareTitle = infoList[5].name;
-			var shareDescription = '';
+			var shareDescription = infoList[5].name;
 			break;
 		case 6:
-			var shareTitle = infoList[6].name;
-			var shareDescription = '';
+			var shareDescription = infoList[6].name;
 			break;
 		case 7:
-			var shareTitle = infoList[7].name;
-			var shareDescription = '';
+			var shareDescription = infoList[7].name;
 			break;
 	}
+	var shareTitle = '방에서 떠나는 가상여행 결과'
 	const shareImageUrl = url + 'img/png/' + imageNumber + '.png';
 	sendKakaoLink(shareTitle, shareDescription, shareImageUrl);
 }

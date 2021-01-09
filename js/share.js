@@ -30,7 +30,7 @@ function sendKakaoLink(shareTitle, shareDescription, shareImageUrl) {
 		},
 		buttons: [
 			{
-				title: '테스트 하러가기',
+				title: '나도 테스트 하러가기',
 				link: {
 					mobileWebUrl: 'https://virtualtourtest.netlify.app/',
 					webUrl: 'https://virtualtourtest.netlify.app/',
@@ -75,13 +75,6 @@ function createDescription(){
 	var shareTitle = '방에서 떠나는 가상여행 결과'
 	const shareImageUrl = url + 'img/png/' + imageNumber + '.png';
 	sendKakaoLink(shareTitle, shareDescription, shareImageUrl);
-}
-
-const fb = () => {
-  window.open('https://www.facebook.com/sharer/sharer.php?u='
-    + url + '&t=' + title + '' + hash,
-    'facebooksharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
-  return false;
 }
 
 const copy = () => {

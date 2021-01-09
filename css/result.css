@@ -80,7 +80,7 @@
 }
 
 #share-box {
-  margin: 25px 10% 30px 10%;
+  margin: 30% 10% 30% 10%;
   padding: 7px;
   width: 40%;
   height: 30px;
@@ -239,7 +239,7 @@
     font-size: 1.2rem;
   }
   #share-box {
-    margin: 25px 35% 30px 35%;
+    margin: 30px 35% 30px 35%;
     width: 30%;
   }
   .btn {

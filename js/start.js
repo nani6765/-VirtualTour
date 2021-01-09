@@ -144,14 +144,6 @@ const goResult = () => {
 	}, 600);
 };
 
-function copyImage(){
-	const point = calcScore(); //return point
-	const grade = sortResult(point); // return num
-	const img_url = 'img/image-' + grade + '.png';
-	const ImageURL = 'https://virtualtourtest.netlify.app/' + img_url;
-	window.location.assign(ImageURL);
-}
-
 const end = () => {
 	qna.style.animation = '';
 	//https://www.w3schools.com/jsref/met_win_setinterval.asp
@@ -165,25 +157,10 @@ const end = () => {
 	//timeout 지정 해제
 	setTimeout(() => clearTimeout(interval), 500);
 	//qna display 지움
-	setTimeout(() => (qna.style.display = 'none'), 500);
-
-	//계산중인 화면 등장
 	setTimeout(() => {
-		const calc = document.getElementById('calc');
-		calc.style.display = 'block';
-		calc.style.animation = 'going-up 0.5s forwards, ' + 'fade-in 0.5s forwards';
-	}, 700);
-
-	//계산중인 화면 사라짐
-	setTimeout(() => {
-		calc.style.animation = '';
-		calc.style.animation = 'going-left 0.4s forwards, ' + 'fade-out 0.4s forwards';
-		setTimeout(() => {
-			calc.style.display = 'none';
-			//goResult
-			goResult();
-		}, 400);
-	}, 9000);
+		qna.style.display = 'none'
+		goResult();
+	}, 500);
 };
 
 //goNext : addAnswer(qNum.a[i].answer, i);
@@ -220,7 +197,7 @@ const addAnswer = (answerTxt, idx) => {
 const goNext = () => {
 	if (qIdx++ === qnaList.length - 1) {
 		//qnaList를 다 돌았으면 end로
-		goResult();
+		end();
 		return;
 	}
 

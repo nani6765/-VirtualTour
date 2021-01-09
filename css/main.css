@@ -9,12 +9,6 @@
 	animation: fade-in 0.5s ease-out 0.3s both, going-down 0.5s ease-out 0.3s both;
 }
 
-.wline{
-	padding: 0 15%;
-	text-align: center;
-	margin: 50px 0;
-}
-
 :root {
 	--main-lightpink: #faaca8;
 	--main-lightpurple: #ddd6f3;
@@ -82,9 +76,8 @@ h3,
 }
 
 #name-input :focus {
-	outline:none;
+	outline: none;
 }
-
 
 .check-name {
 	display: inline-block;
@@ -97,7 +90,7 @@ h3,
 	font-family: 'a고딕14', sans-serif;
 }
 .start-wrap {
-	margin: 0 20% 20px 26.5%;
+	margin: 0 20% 0 26.5%;
 	width: 40%;
 }
 .start {
@@ -113,8 +106,8 @@ h3,
 	font-weight: 600;
 	font-size: 32px;
 	font-size: 2rem;
-	animation: fade-in 0.5s ease-out 1.9s both, going-down 0.5s ease-out 1.9s both,
-		start-flicker 2.5s infinite;
+	animation: fade-in 0.25s ease-out 0.95s both, going-down 0.25s ease-out 0.95s both,
+		start-flicker 1.5s infinite;
 	cursor: pointer;
 	margin-left: 10%;
 }
@@ -123,8 +116,30 @@ h3,
 	animation-play-state: paused;
 	background-color: var(--main-lightpurple);
 	border: none;
-    outline: none;
+	outline: none;
 }
 .start:active {
 	animation-play-state: running;
+}
+
+.BottomAdd {
+	padding-top: 40px;
+}
+
+@media all and (min-width: 768px) {
+	.BottomAdd {
+		padding-top: 37.5px;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.BottomAdd {
+		padding-top: 40px;
+	}
+}
+
+@media all and (min-width: 1440px) {
+	.BottomAdd {
+		padding-top: 50px;
+	}
 }

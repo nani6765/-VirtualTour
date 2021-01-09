@@ -131,65 +131,45 @@
 }
 
 .btn {
-  box-sizing: border-box;
-  margin: 0 30% 5px 30%;
-  min-width: 150px;
-  height: 35px;
-  line-height: 30px;
-  border: 1.5px solid;
-  border-radius: 20px;
-  background: white;
-  color: black;
-  font-weight: 500;
-  transition: background-color 0.2s ease-in-out;
-  border-color: #FF75EF ;
+	box-sizing: border-box;
+	margin: 0 20% 15px 20%;
+	min-width: 200px;
+	height: 35px;
+	line-height: 30px;
+	border: 1.5px solid;
+	border-radius: 20px;
+	background: white;
+	color: black;
+	font-weight: 500;
+	transition: background-color 0.2s ease-in-out;
 }
 
 .btn:hover {
-  background: #FF75EF;
-  color : #fff;
+	color: #fff;
 }
 
-.btnKakao {
-  box-sizing: border-box;
-  margin: 0 30% 10px 30%;
-  min-width: 150px;
-  height: 35px;
-  line-height: 30px;
-  border: 1.5px solid;
-  border-radius: 20px;
-  background: white;
-  color: black;
-  font-weight: 500;
-  transition: background-color 0.2s ease-in-out;
-  border-color: #fff000 ;
-  color : black;
+.Urlcopy {
+	border-color: #1a7cff;
 }
 
-.btnKakao:hover {
-  background: #fff000;
-  color : #fff;
+.Urlcopy:hover {
+	background: #1a7cff;
 }
 
-.btnCopy {
-  box-sizing: border-box;
-  margin: 0 30% 10px 30%;
-  min-width: 150px;
-  height: 35px;
-  line-height: 30px;
-  border: 1.5px solid;
-  border-radius: 20px;
-  background: white;
-  color: black;
-  font-weight: 500;
-  transition: background-color 0.2s ease-in-out;
-  border-color: #1A7CFF ;
-  color : black;
+.Kakao {
+	border-color: #f7e600;
 }
 
-.btnCopy:hover {
-  background: #1A7CFF;
-  color : #fff;
+.Kakao:hover {
+	background: #f7e600;
+}
+
+.Copyr {
+	border-color: #ff75ef;
+}
+
+.Copyr:hover {
+	background: #ff75ef;
 }
 
 .hash {

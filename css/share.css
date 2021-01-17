@@ -5,7 +5,7 @@
   background: rgb(255, 255, 255);
   text-align: center;
   word-break: keep-all;
-  opacity: 0;
+  opacity: 1;
 }
 
 .result.title {
@@ -26,9 +26,7 @@
   font-family: 'a고딕15', sans-serif;
 }
 #score-box > .title {
-  animation: fade-in 0.6s ease-out 0.4s forwards,
-          going-down 0.6s ease-out 0.4s forwards;
-  opacity: 0;
+  opacity: 1;
   margin-bottom: 30px;
 }
 
@@ -37,9 +35,7 @@
   font-size: 64px;
   font-size: 4rem;
   font-weight: bolder;
-  animation: fade-in 0.6s ease-out 1.8s forwards,
-          going-down 0.6s ease-out 1.8s forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 .art {
@@ -47,9 +43,7 @@
   height: 90vh;
   max-height: 700px;
   background-color: #fff;
-  animation: fade-in 0.3s ease-out 3.2s both,
-          going-down 0.3s ease-out 3.2s both;
-  opacity: 0;
+  opacity: 1;
 }
 .art > img {
   display: block;

@@ -24,16 +24,16 @@ function sendKakaoLink(shareURL, shareTitle, shareDescription, shareImageUrl) {
 			imageUrl:
 				shareImageUrl,
 			link: {
-				mobileWebUrl: 'shareURL',
-				webUrl: 'shareURL',
+				mobileWebUrl: shareURL,
+				webUrl: shareURL,
 			},
 		},
 		buttons: [
 			{
 				title: '결과확인하기',
 				link: {
-					mobileWebUrl: 'shareURL',
-					webUrl: 'shareURL',
+					mobileWebUrl: shareURL,
+					webUrl: shareURL,
 				},
 			},
 		],

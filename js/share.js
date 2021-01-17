@@ -15,7 +15,7 @@ function checkImage(){
 	return error;
 }
 
-function sendKakaoLink(shareTitle, shareDescription, shareImageUrl) {
+function sendKakaoLink(shareURL, shareTitle, shareDescription, shareImageUrl) {
 	Kakao.Link.sendDefault({
 		objectType: 'feed',
 		content: {
@@ -24,16 +24,16 @@ function sendKakaoLink(shareTitle, shareDescription, shareImageUrl) {
 			imageUrl:
 				shareImageUrl,
 			link: {
-				mobileWebUrl: 'https://virtualtourtest.netlify.app/',
-				webUrl: 'https://virtualtourtest.netlify.app/',
+				mobileWebUrl: 'shareURL',
+				webUrl: 'shareURL',
 			},
 		},
 		buttons: [
 			{
-				title: '나도 테스트 하러가기',
+				title: '결과확인하기',
 				link: {
-					mobileWebUrl: 'https://virtualtourtest.netlify.app/',
-					webUrl: 'https://virtualtourtest.netlify.app/',
+					mobileWebUrl: 'shareURL',
+					webUrl: 'shareURL',
 				},
 			},
 		],
@@ -74,7 +74,8 @@ function createDescription(){
 	}
 	var shareTitle = '방에서 떠나는 가상여행 결과'
 	const shareImageUrl = url + 'img/png/' + imageNumber + '.png';
-	sendKakaoLink(shareTitle, shareDescription, shareImageUrl);
+	const shareURL = url + 'page/result-' + imageNumber + '.html';
+	sendKakaoLink(shareURL, shareTitle, shareDescription, shareImageUrl);
 }
 
 const copy = () => {

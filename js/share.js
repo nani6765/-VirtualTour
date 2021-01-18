@@ -99,7 +99,7 @@ const tw = () => {
 	var shareImageUrl = url + 'img/png/' + imageNumber + '.png';
 
 	window.open('https://twitter.com/intent/tweet?text='
-	  + title + '%0A' + '저는 ' + shareDescription + '입니다!' + hash + '%0A' + shareImageUrl,
+	  + title + '%0A' + '저는 ' + shareDescription + '입니다!' + '%0A' + shareImageUrl,
 	  'twittersharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
 	return false;
 }

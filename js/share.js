@@ -3,18 +3,6 @@ const title = '방에서 떠나는 가상여행';
 const hash = '%2심리테스트 %23방에서 떠나는 가상여행 %23나와 맞는 여행지는?';
 var art = document.querySelector('.art')
 
-function checkImage(){
-	if(art.hasChildNodes){
-		console.log("has");
-		var artImage = art.firstChild.alt;
-		return Number(artImage);
-	} else {
-		console.log("error");
-		alert("구현중입니다.");
-	}
-	return error;
-}
-
 function sendKakaoLink(shareURL, shareTitle, shareDescription, shareImageUrl) {
 	Kakao.Link.sendDefault({
 		objectType: 'feed',
@@ -40,8 +28,20 @@ function sendKakaoLink(shareURL, shareTitle, shareDescription, shareImageUrl) {
 	});
 }
 
+function checkImage(){
+	if(art.hasChildNodes){
+		console.log("has");
+		var artImage = art.firstChild.alt;
+		return Number(artImage);
+	} else {
+		console.log("error");
+		alert("구현중입니다.");
+	}
+	return error;
+}
+
 function createDescription(){
-	const imageNumber = checkImage();
+	var imageNumber = checkImage();
 	console.log(imageNumber);
 	if(imageNumber === "error"){
 		return 0;
@@ -72,8 +72,14 @@ function createDescription(){
 			var shareDescription = infoList[7].name;
 			break;
 	}
-	var shareTitle = '방에서 떠나는 가상여행 결과'
-	const shareImageUrl = url + 'img/png/' + imageNumber + '.png';
+	return shareDescription;
+}
+
+function KakaoInfo(){
+	var shareTitle = '방에서 떠나는 가상여행 결과';
+	var imageNumber = checkImage();
+	var shareDescription = createDescription();
+	var shareImageUrl = url + 'img/png/' + imageNumber + '.png';
 	const shareURL = url + 'page/result-' + imageNumber + '.html';
 	sendKakaoLink(shareURL, shareTitle, shareDescription, shareImageUrl);
 }
@@ -85,4 +91,15 @@ const copy = () => {
   tmp.select();
   document.execCommand('copy');
   document.body.removeChild(tmp);
+}
+
+const tw = () => {
+	var imageNumber = checkImage();
+	var shareDescription = shareDescription();
+	var shareImageUrl = url + 'img/png/' + imageNumber + '.png';
+
+	window.open('https://twitter.com/intent/tweet?text='
+	  + title + '%0A' + '저는 ' + shareDescription + '입니다!' + hash + '%0A' + shareImageUrl,
+	  'twittersharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+	return false;
 }

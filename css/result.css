@@ -103,15 +103,6 @@
 	background-image: url('../img/copy.png');
 }
 
-.kakao{
-	background-image: url('https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png');
-}
-
-.fb {
-	background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg');
-}
-
-
 #copyright {
 	padding: 0 7.5%;
 	text-align: center;
@@ -162,6 +153,14 @@
 
 .Kakao:hover {
 	background: #f7e600;
+}
+
+.Twitter{
+  border-color: #00acee;
+}
+
+.Twitter:hover{
+  background-color: #00acee;
 }
 
 .Copyr {

@@ -95,7 +95,7 @@ const copy = () => {
 
 const tw = () => {
 	var imageNumber = checkImage();
-	var shareDescription = shareDescription();
+	var shareDescription = createDescription();
 	var shareImageUrl = url + 'img/png/' + imageNumber + '.png';
 
 	window.open('https://twitter.com/intent/tweet?text='
